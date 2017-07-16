@@ -32,7 +32,7 @@ library(stringr)
 ---
 **str_c ()** combines strings
 ``` 
-library(stringr)
+
 str_c("abra","ca","dabra")
 
  ## [1] "abracadabra"
