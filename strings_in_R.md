@@ -20,12 +20,13 @@ Here is a small "aide-mémoire" showing the usefulness of the important ones in 
 
 ![](http://perso.ens-lyon.fr/lise.vaudor/Rfigures/Manip_de_strings/stringr.png)
 
+---
 ## Load `stringr` package
 
 library(stringr)
 
 ### These are the functions in stringr package
-
+---
 **str_c ()** combines strings
 ``` 
 library(stringr)
@@ -37,12 +38,16 @@ str_c("Les jeux","de mots laids","sont pour","les gens bêtes", sep=" ")
 
  ## [1] "Les jeux de mots laids sont pour les gens bêtes"
 ```
+
+---
 **str_length ()** counts the number of characters in a string
 ```
 str_length("anticonstitutionnellement")
 
 ## [1] 25
 ```
+
+---
 **str_sub ()** extracts the characters from the string, from the start location to the end location
 ```
 str_sub("youpiyaya",start=1,end=5)
@@ -59,7 +64,7 @@ str_sub("youpiyaya",start=4)
 
 ```
 
-
+---
 **str_split ()** breaks the strings wherever a pattern (or pattern) is present
 
 ```
@@ -97,6 +102,7 @@ str_split(c("beau_gros_chat",
 
 ```
 
+---
 
 **str_detect ()** detects a pattern
 
@@ -109,6 +115,7 @@ str_detect(c("Quarante","carottes","crues",
 ## [1] FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE
 ```
 
+---
 **str_count ()** counts the instances of a pattern
 
 ```
@@ -117,6 +124,8 @@ str_count(c("L'âne","Trotro","trotte","à une allure","traitreusement","tranqui
 
 ## [1] 0 1 1 0 2 1
 ```
+
+---
 
 **str_subset ()** creates a subset of the vector where the pattern is present
 
@@ -129,7 +138,7 @@ str_subset(c("Quarante","carottes","crues",
 ## [1] "crues"    "croient"  "croquer"  "crée"     "crampes."
 ```
 
-
+---
 
 **str_extract ()** extracts the pattern (where it is present)
 
@@ -169,6 +178,7 @@ str_extract_all(c("L'âne","Trotro","trotte","à une allure","traitreusement","t
 
 If a pattern is present several times in one of the elements of the vector in input, then it will correspond to several elements in the output (thus the output corresponds not to a vector of the same size as the input but to a list) .
 
+---
 **str_replace ()** replaces the pattern with another pattern
 
 ```
