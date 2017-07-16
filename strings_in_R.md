@@ -1,4 +1,4 @@
-Taken from [this page](http://perso.ens-lyon.fr/lise.vaudor/manipuler-des-strings-avec-r/), translated and edited in English with help of Google translator !!
+***Taken from [this page](http://perso.ens-lyon.fr/lise.vaudor/manipuler-des-strings-avec-r/), translated and edited in English with help of Google translator !!***
 
 
 ### Why manipulate strings ?
