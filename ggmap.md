@@ -34,14 +34,10 @@ Geographic coordinates can be obtained with `geocode()` function.
 
 
 Example:
-
-```
+```{r}
 library(ggmap)
 site <- geocode("Pokhara")
 Pokhara<- ggmap(get_map(location=site, source="google", zoom=10), extent="panel")
 Pokhara
 
 ```
-
-
-  
