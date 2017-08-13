@@ -31,7 +31,7 @@ Example:
 ```
 library(ggmap)
 site <- geocode("Pokhara")
-Pokhara<- ggmap(get_map(location=site, source=google, zoom=10), extent="panel")
+Pokhara<- ggmap(get_map(location=site, source="google", zoom=10), extent="panel")
 Pokhara
 
 ```
