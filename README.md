@@ -1,4 +1,4 @@
-<img src="https://www.r-project.org/logo/Rlogo.svg" alt="R" height="300" width="300">
+<img src="https://www.r-project.org/logo/Rlogo.svg" alt="R" height="200" width="200">
 
 ---
 
