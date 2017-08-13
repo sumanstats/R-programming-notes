@@ -1,8 +1,3 @@
----
-title: "Untitled"
-output: html_document
----
-
 ## Using ggmap 
 
 ---
