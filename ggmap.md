@@ -3,8 +3,8 @@
 It is a package interfacing ggplot2 and RGoogleMaps.
 
 There are two steps in making a map.
-+ download raster data for the map
-+ create the ggmap() and overlay with layers 
++ download raster data for the map with `get_map()`
++ plot with the `ggmap()` and overlay with layers 
 
 
 
@@ -18,4 +18,21 @@ Location specification can be done with:
 
 
 maptype in `ggmap`:
+* `satellite`
+* `roadmap`
+* `hybrid`
+
+Geographic coordinates can be obtained with `geocode()` function.
+
+
+
+
+Example:
+```
+library(ggmap)
+site <- geocode("Pokhara")
+Pokhara<- ggmap(get_map(location=site, source=google, zoom=10), extent="panel")
+Pokhara
+
+```
   
