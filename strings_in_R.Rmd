@@ -1,0 +1,163 @@
+***Taken from [this page](http://perso.ens-lyon.fr/lise.vaudor/manipuler-des-strings-avec-r/), translated and edited in English with help of Google translator !!***
+
+
+### Why manipulate strings ?
+**Two main possible reasons:**
+
++ So that we can easily work on texts (novels, press articles, reports, scientific articles, websites, tweets, facebook and so on), and can do 
+text mining, machine learning on these data.
++ To clean / retrieve info "imprisoned" in strings ... 
+  + For example, you have a sensor that creates files with the name 
+"monsuperfichier_02032017_X330441.22_Y402933.54.txt" and you want Retrieve the date (02/03/2017) and the coordinates (X and Y) 
+corresponding to each of these files. 
+  + Or you have a table column containing information about the style 
+"Bruce Wayne, Batman, masked judge" and you want to have this information separated into "Bruce Wayne", "Batman", and "masked judge" ...
+
+
+In all these cases, knowing how to perform basic operations (detection of patterns, replacement of patterns, cutting of strings) 
+will prove indispensable. 
+The package stringr, in particular, is of invaluable help. 
+The functions of this package are easily recognizable since all their names begin with "str_".
+
+Here is a small "aide-mémoire" showing the usefulness of the important ones in `stringr` package.
+
+![](http://perso.ens-lyon.fr/lise.vaudor/Rfigures/Manip_de_strings/stringr.png)
+
+---
+## Load `stringr` package
+
+`library(stringr)`
+
+### These are the functions in stringr package
+---
+**str_c ()** combines strings
+```{r}
+
+str_c("abra","ca","dabra")
+
+ 
+
+str_c("Les jeux","de mots laids","sont pour","les gens bêtes", sep=" ")
+
+
+```
+
+ 
+
+**str_length ()** counts the number of characters in a string
+
+```{r}
+str_length("anticonstitutionnellement")
+```
+
+
+**str_sub ()** extracts the characters from the string, from the start location to the end location
+
+
+
+```{r}
+str_sub("youpiyaya",start=1,end=5)
+
+str_sub("youpiyaya",start=-4)
+str_sub("youpiyaya",start=4)
+```
+
+
+
+**str_split ()** breaks the strings wherever a pattern (or pattern) is present
+
+
+```{r}
+
+str_split(c("beau_gros_chat",
+            "joli_chien",
+            "vilain_petit_canard"),
+          "_")
+```
+
+
+
+
+The pattern (here "_") can be present a variable number of times, so the output elements are not necessarily of the same size. That is why this function returns a list.
+
+On the other hand, if we know that all the elements of the input will be cut into as many pieces, then we can ask for an output in the form of a matrix, more practical to manipulate later, using the argument `simplify=TRUE`.
+
+
+```{r}
+str_split(c("beau_gros_chat",
+            "joli_petit_chien",
+            "vilain_petit_canard"),
+          "_",
+          simplify=TRUE)
+```
+
+
+
+
+**str_detect ()** detects a pattern
+
+```{r}
+str_detect(c("Quarante","carottes","crues",
+             "croient","que","croquer",
+             "crée","des","crampes."),
+           pattern="cr")
+
+```
+
+
+**str_count ()** counts the instances of a pattern
+
+```{r}
+str_count(c("L'âne","Trotro","trotte","à une allure","traitreusement","tranquille"),
+           pattern="tr")
+```
+
+
+
+**str_subset ()** creates a subset of the vector where the pattern is present
+
+```{r}
+str_subset(c("Quarante","carottes","crues",
+             "croient","que","croquer",
+             "crée","des","crampes."),
+           pattern="cr")
+
+```
+
+
+
+**str_extract ()** extracts the pattern (where it is present)
+
+```{r}
+str_extract(c("L'âne","Trotro","trotte","à une allure","traitreusement","tranquille"),
+           pattern="tr")
+
+```
+
+
+*Note the difference between str_extract () and str_extract_all ():*
+
+```{r}
+str_extract_all(c("L'âne","Trotro","trotte","à une allure","traitreusement","tranquille"),
+           pattern="tr")
+
+```
+
+If a pattern is present several times in one of the elements of the vector in input, then it will correspond to several elements in the output (thus the output corresponds not to a vector of the same size as the input but to a list) .
+
+---
+**str_replace ()** replaces the pattern with another pattern
+
+```{r}
+str_replace("All we hear is Radio ga ga Radio goo goo Radio ga ga",
+            pattern="goo",
+            replacement="ga")
+
+
+str_replace_all("All we hear is Radio ga ga Radio goo goo Radio ga ga",
+            pattern="goo",
+            replacement="ga")
+
+```
+
+*Again, notice the difference between str_replace () and str_replace_all () !!*
