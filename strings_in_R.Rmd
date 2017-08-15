@@ -1,3 +1,5 @@
+
+
 ***Taken from [this page](http://perso.ens-lyon.fr/lise.vaudor/manipuler-des-strings-avec-r/), translated and edited in English with help of Google translator !!***
 
 
@@ -7,10 +9,10 @@
 + So that we can easily work on texts (novels, press articles, reports, scientific articles, websites, tweets, facebook and so on), and can do 
 text mining, machine learning on these data.
 + To clean / retrieve info "imprisoned" in strings ... 
-  + For example, you have a sensor that creates files with the name 
+    + For example, you have a sensor that creates files with the name 
 "monsuperfichier_02032017_X330441.22_Y402933.54.txt" and you want Retrieve the date (02/03/2017) and the coordinates (X and Y) 
 corresponding to each of these files. 
-  + Or you have a table column containing information about the style 
+    + Or you have a table column containing information about the style 
 "Bruce Wayne, Batman, masked judge" and you want to have this information separated into "Bruce Wayne", "Batman", and "masked judge" ...
 
 
@@ -32,7 +34,7 @@ Here is a small "aide-mémoire" showing the usefulness of the important ones in 
 ---
 **str_c ()** combines strings
 ```{r}
-
+library(stringr)
 str_c("abra","ca","dabra")
 
  
@@ -160,4 +162,4 @@ str_replace_all("All we hear is Radio ga ga Radio goo goo Radio ga ga",
 
 ```
 
-*Again, notice the difference between str_replace () and str_replace_all () !!*
+ **Again, notice the difference between str_replace () and str_replace_all () !!**
