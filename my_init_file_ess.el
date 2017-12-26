@@ -30,7 +30,7 @@
    (R . t)))
 
 
-
+(set-default-font "Consolas 16")
 
 (require 'yasnippet)
 (yas-global-mode 1)
@@ -42,6 +42,7 @@
 (global-set-key (kbd "C-S-e") (lambda () (interactive) (insert "%$%")))
 
 (global-set-key (kbd "C-S-a") (lambda () (interactive) (insert "%<>%")))
+
 
 
 (setq default-directory "C:/Users/Suman/")
