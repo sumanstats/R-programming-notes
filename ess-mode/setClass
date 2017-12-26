@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: setClass
+# key: sc
+# --
+setClass("${1:Class}",
+  slots = c(${2:name = "type"}),
+  prototype(${3:name = "type"}))

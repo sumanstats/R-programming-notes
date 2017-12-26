@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: shinyapp
+# key: shiny
+# --
+library(shiny)
+
+ui <- fluidPage(
+  ${0}
+)
+
+server <- function(input, output, session) {
+
+}
+
+shinyApp(ui, server)

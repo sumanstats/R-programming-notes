@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sapply
+# key: sapply
+# --
+sapply(${1:list}, ${2:function})

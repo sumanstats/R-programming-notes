@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rapply
+# key: rapply
+# --
+rapply(${1:list}, ${2:function})
