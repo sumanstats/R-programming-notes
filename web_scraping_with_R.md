@@ -11,7 +11,10 @@ MEANING=c()
 
 for (i in c(LETTERS[1:23],"XYZ")){
   data <- read_html(paste0("https://www.englishclub.com/ref/Phrasal_Verbs/",i,"/"))
-  col1 <- data %>% html_nodes("h3") %>% html_text() %>% gsub("\n","",.)
+  
+  col1 <- data %>% html_nodes("h3") %>% html_text() %>% gsub("^[\n]$","",.) %>% gsub("\n"," ",.)
+  
+  col1 <- data %>% html_nodes("h3") %>% html_text() %>% gsub("^\n","",.) %>% gsub("\n$","",.) %>% gsub("\n"," ",.)
   col2 <- data %>% html_nodes("#ec-main") %>% html_nodes(".linkdescription") %>% html_text()
   # print(col1)
   # print(col2)
@@ -20,7 +23,13 @@ for (i in c(LETTERS[1:23],"XYZ")){
 }
 
 
-data.frame(WORDS,MEANING) %>% View()
+mydata <- data.frame(WORDS,MEANING) 
+```
 
+To view the data with DT in html notebook:
+
+```r
+library(DT)
+datatable(mydata)
 ```
 
