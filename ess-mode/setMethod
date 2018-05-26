@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: setMethod
-# key: sm
-# --
-setMethod("${1:generic}", ${2:class}, function(${2:x, ...}) {
-  ${0}
-})

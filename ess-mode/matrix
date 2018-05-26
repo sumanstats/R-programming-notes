@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: matrix
-# key: mat
-# --
-matrix(${1:data}, nrow = ${2:rows}, ncol = ${3:cols})

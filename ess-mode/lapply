@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: lapply
-# key: lapply
-# --
-lapply(${1:list}, ${2:function})

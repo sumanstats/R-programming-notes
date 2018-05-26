@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: source
-# key: src
-# --
-source("${1:file.R}")
-$0
