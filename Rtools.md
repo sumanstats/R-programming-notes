@@ -3,16 +3,14 @@
 This is tested on Windows 10 Home edition with [R v3.5.0](https://cran.r-project.org/src/base/R-3/R-3.5.0.tar.gz) and [Rtools35](https://cran.r-project.org/bin/windows/Rtools/Rtools35.exe). I borrowed ideas [from here](https://stackoverflow.com/questions/25455829/using-a-different-gcc-version-from-that-included-with-rtools-with-rcpp-on-window).
 
 
-Some people including me :) are fond of using latest gcc in Rtools.
-
-Here I describe how we can use GCC v7.3 with Rtools to compile source packages in R.
+Here I describe how we can use **GCC v7.3** with Rtools to compile source packages in R.
 
 1. Install [R](https://www.r-project.org/)
 2. Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/Rtools35.exe). The default installation location will be `C:\Rtools`. You will see following subfolders inside `Rtools`:
 
 ![](https://i.imgur.com/QwhHJeb.png)
 
-Delete whatever is present inside `mingw_64` subfolder.
+Delete whatever is present **inside** `mingw_64` subfolder.
 
 3. Now go to download gcc from [this MinGW distro](https://nuwen.net/mingw.html). Download [mingw-15.4-without-git.exe](https://nuwen.net/files/mingw/mingw-15.4-without-git.exe). 
 
