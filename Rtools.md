@@ -12,17 +12,22 @@ Here I describe how we can use **GCC v7.3** with Rtools to compile source packag
 
 Delete whatever is present **inside** `mingw_64` subfolder.
 
-3. Now go to download gcc from [this MinGW distro](https://nuwen.net/mingw.html). Download [mingw-15.4-without-git.exe](https://nuwen.net/files/mingw/mingw-15.4-without-git.exe). 
+3. Set the path so that `Rtools` is in path by editing environment variable as below:
+
+![](https://i.imgur.com/cbadT4G.png)
+
+
+4. Now go to download gcc from [this MinGW distro](https://nuwen.net/mingw.html). Download [mingw-15.4-without-git.exe](https://nuwen.net/files/mingw/mingw-15.4-without-git.exe). 
 
 ![](https://i.imgur.com/I2ZYG9z.png)
 
 Install in its default location wherever. Note that it will get installed in `MinGW\` folder. Copy/Cut whatever is **inside** this `MinGW\` folder.
 
-4. Go to `mingw_64` **subfolder** inside `Rtools` and paste whatever been copied/cut in step 3. After pasting you will see this:
+5. Go to `mingw_64` **subfolder** inside `Rtools` and paste whatever been copied/cut in step 3. After pasting you will see this:
 
 ![](https://i.imgur.com/uGQSktP.png)
 
-5. Test your setup to compile C/C++ code in R package with following lines in `R` console:
+6. Test your setup to compile C/C++ code in R package with following lines in `R` console:
 ```
 remove.packages("data.table")
 install.packages("data.table", type = "source",
