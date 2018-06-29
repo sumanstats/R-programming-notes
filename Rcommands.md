@@ -2,6 +2,7 @@ Abbreviations of R Commands Explained: [250+ R Abbreviations](http://jeromyangli
 
 
 **Table of R Commands**
+
 |R command                  |Abbreviation explained                                                              |Comments                                                                                                                                                                                                                                |
 |:-------------------------:|:----------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |ls                         |[L]i[S]t objects                                                                    |common command in Unix-like operating systems                                                                                                                                                                                           |
