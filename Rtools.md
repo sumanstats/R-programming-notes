@@ -27,7 +27,7 @@ Install in its default location wherever. Note that it will get installed in `Mi
 
 ![](https://i.imgur.com/wZlB7x2.png)
 
-6. Test your setup to compile C/C++ code in R package with following lines in `R` console:
+6. Test your setup to compile C/C++ code in R package `rdatatable` with following lines in `R` console:
 ```
 remove.packages("data.table")
 install.packages("data.table", type = "source",
@@ -36,5 +36,7 @@ install.packages("data.table", type = "source",
 If successful, you will find something like this:
 
 ![](https://i.imgur.com/MmIc3dq.png)
+
+It compiles `Rcpp` from source too !
 
 You are done.
